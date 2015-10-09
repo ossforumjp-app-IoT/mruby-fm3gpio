@@ -5,9 +5,9 @@ FM3 GPIO class
 
 |method|parameter(s)|return|
 |---|---|---|
-|GPIO.mode|Pin No, OUTPUT/INPUT|(nil)|
-|GPIO.write|Pin No, HIGH/LOW|(nil)|
-|GPIO.read|Pin No|HIGH/LOW|
+|GPIO#mode|Pin No, OUTPUT/INPUT|(nil)|
+|GPIO#write|Pin No, HIGH/LOW|(nil)|
+|GPIO#read|Pin No|HIGH/LOW|
 
 ## Constants
 
