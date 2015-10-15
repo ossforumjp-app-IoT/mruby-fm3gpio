@@ -68,7 +68,7 @@ void mrb_mruby_fm3gpio_gem_final(mrb_state *mrb);
 
 void setADE(void)
 {
-	uint32_t *add;
+	volatile uint32_t *add;
 	
 	add = (uint32_t *)(registerTable_config[T_ADE]);
 	*add = 0;
@@ -77,7 +77,7 @@ void setADE(void)
 void setPFR(uint8_t pin_hi, uint8_t pin_lo, uint8_t mode)
 {
 	uint32_t bit = (0x00000001 << pin_lo);
-	uint32_t *add;
+	volatile uint32_t *add;
 
 	if(pin_hi < NUM_GPIO)
 	{
@@ -96,7 +96,7 @@ void setPFR(uint8_t pin_hi, uint8_t pin_lo, uint8_t mode)
 void setDDR(uint8_t pin_hi, uint8_t pin_lo, uint8_t mode)
 {
 	uint32_t bit = (0x00000001 << pin_lo);
-	uint32_t *add;
+	volatile uint32_t *add;
 	
 	if(pin_hi < NUM_GPIO)
 	{
@@ -115,7 +115,7 @@ void setDDR(uint8_t pin_hi, uint8_t pin_lo, uint8_t mode)
 void setPDOR(uint8_t pin_hi, uint8_t pin_lo, uint8_t hilo)
 {
 	uint32_t bit = (0x00000001 << pin_lo);
-	uint32_t *add;
+	volatile uint32_t *add;
 	
 	if(pin_hi < NUM_GPIO)
 	{
@@ -135,7 +135,7 @@ uint8_t readPFR(uint8_t pin_hi, uint8_t pin_lo)
 {
 	uint32_t data;
 	uint8_t ret;
-	uint32_t *add;
+	volatile uint32_t *add;
 	
 	if(pin_hi < NUM_GPIO)
 	{
@@ -156,7 +156,7 @@ uint8_t readDDR(uint8_t pin_hi, uint8_t pin_lo)
 {
 	uint32_t data;
 	uint8_t ret;
-	uint32_t *add;
+	volatile uint32_t *add;
 	
 	if(pin_hi < NUM_GPIO)
 	{
@@ -177,7 +177,7 @@ uint8_t readPDIR(uint8_t pin_hi, uint8_t pin_lo)
 {
 	uint32_t data;
 	uint8_t ret;
-	uint32_t *add;
+	volatile uint32_t *add;
 	
 	if(pin_hi < NUM_GPIO)
 	{
@@ -198,7 +198,7 @@ uint8_t readPDOR(uint8_t pin_hi, uint8_t pin_lo)
 {
 	uint32_t data;
 	uint8_t ret;
-	uint32_t *add;
+	volatile uint32_t *add;
 	
 	if(pin_hi < NUM_GPIO)
 	{
