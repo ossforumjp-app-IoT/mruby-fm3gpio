@@ -218,8 +218,6 @@ uint8_t readPDOR(uint8_t pin_hi, uint8_t pin_lo)
 /* GPIO.initialize */
 mrb_value mrb_FM3_digitalInitialize(mrb_state *mrb, mrb_value self)
 {
-	setADE();
-	
 	return mrb_nil_value();
 }
 
